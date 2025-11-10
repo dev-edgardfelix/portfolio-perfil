@@ -100,21 +100,21 @@ const projetos = [
         img: "media/sistem-users.png",
         titulo: "Sistem Users",
         descricao: "Sistema Front-End (React) para cadastrar usuários com informações pessoais e sobre seus cargos e funções / Informações sobre a quantidade de usuários cadastrados na plataforma",
-        link: ""
+        link: "https://sistemusers.vercel.app/"
     },
 
     {
         img: "media/conversor-cotacao.png",
         titulo: "Conversor de moedas estrangeiras",
         descricao: "Aplicação feita com JavaScript que converte o real brasileiro para outras moedas, a cotação monetária se mantém constante, pois há consumo de API Externa que atualiza quaisquer mudanças",
-        link: ""
+        link: "https://currencymoney.vercel.app/"
     },
 
     {
         img: "media/jokenpo.png",
         titulo: "Pedra, Papel, Tesoura !",
         descricao: "Uma forma dinâmica para treinamento de Funções e Funções com Parâmetros. Funções (Functions) é a 'base' da linguagem JavaScript, por isso é essencial sua prática. Você contra a máquina, um clássico Video Game!",
-        link: ""
+        link: "https://jokenpo-nine-phi.vercel.app/"
     }
 ];
 
