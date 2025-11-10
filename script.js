@@ -1,3 +1,5 @@
+//---------------------BACKGROUND----------------------
+
 const canvas = document.getElementById('bgCanvas');
 const ctx = canvas.getContext('2d');
 
@@ -88,4 +90,48 @@ ${mensagem}`;
         const url = `https://wa.me/${numero}?text=${mensagemEncode}`;
         window.open(url, "_blank");
     });
+});
+
+
+//---------------------CARDS DOS PROJETOS--------------------------
+
+const projetos = [
+    {
+        img: "media/sistem-users.png",
+        titulo: "Sistem Users",
+        descricao: "Sistema Front-End (React) para cadastrar usuários com informações pessoais e sobre seus cargos e funções / Informações sobre a quantidade de usuários cadastrados na plataforma",
+        link: ""
+    },
+
+    {
+        img: "media/conversor-cotacao.png",
+        titulo: "Conversor de moedas estrangeiras",
+        descricao: "Aplicação feita com JavaScript que converte o real brasileiro para outras moedas, a cotação monetária se mantém constante, pois há consumo de API Externa que atualiza quaisquer mudanças",
+        link: ""
+    },
+
+    {
+        img: "media/jokenpo.png",
+        titulo: "Pedra, Papel, Tesoura !",
+        descricao: "Uma forma dinâmica para treinamento de Funções e Funções com Parâmetros. Funções (Functions) é a 'base' da linguagem JavaScript, por isso é essencial sua prática. Você contra a máquina, um clássico Video Game!",
+        link: ""
+    }
+];
+
+
+const cardsContainer = document.querySelector(".cardsProjects");
+
+
+projetos.forEach(projeto => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+        <img src="${projeto.img}" alt="${projeto.titulo}">
+        <h3>${projeto.titulo}</h3>
+        <p>${projeto.descricao}</p>
+        <a href="${projeto.link}" target="_blank">Ver projeto</a>
+    `;
+
+    cardsContainer.appendChild(card);
 });
