@@ -1,0 +1,184 @@
+/* ===================== MEDIA QUERY ===================== */
+
+/* Mobile large e pequenos (até 768px) */
+@media (max-width: 768px) {
+
+    /* força o header a virar coluna e centralizar */
+    header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+        padding: 10px 16px !important;
+    }
+
+    /* logo menor */
+    header>.image>img {
+        width: 70px !important;
+        height: 90px !important;
+    }
+
+    /* faz o nav ocupar linha própria e centraliza os links */
+    header>nav.nav-menu {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        padding: 6px 0 !important;
+        order: 2;
+    }
+
+    /* cada link vira um bloco para quebrar em várias linhas */
+    header>nav.nav-menu>a {
+        display: inline-block !important;
+        font-size: 16px !important;
+        margin: 6px 8px !important;
+        padding: 6px 10px !important;
+        white-space: nowrap;
+    }
+
+    /* Perfil principal passa a coluna */
+    .informFirst {
+        flex-direction: column !important;
+        gap: 30px !important;
+        margin-top: 90px !important;
+        padding: 0 16px !important;
+        align-items: center !important;
+    }
+
+    .informFirst>.perfilImage>img {
+        width: 240px !important;
+        height: auto !important;
+    }
+
+    .perfilDescription {
+        text-align: center !important;
+        font-size: 20px !important;
+    }
+
+    .redes-sociais {
+        width: 100% !important;
+        justify-content: space-around !important;
+        font-size: 1.8rem !important;
+    }
+
+    /* Ajustes no artigo */
+    article {
+        margin-top: 120px !important;
+        padding: 18px !important;
+    }
+
+    article>.subNota {
+        font-size: 20px !important;
+        margin-bottom: 40px !important;
+    }
+
+    article>.textDesc {
+        font-size: 18px !important;
+    }
+
+    /* Ícones scroll */
+    .scroll-content img {
+        width: 80px !important;
+    }
+
+    /* Projetos: empilha os cards em coluna */
+    .projetos {
+        margin-top: 80px !important;
+        padding: 0 12px !important;
+    }
+
+    .projetos>span {
+        font-size: 1.9rem !important;
+    }
+
+    .cardsProjects {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 30px !important;
+        margin-top: 30px !important;
+    }
+
+    .card {
+        width: 94% !important;
+        max-width: 560px !important;
+    }
+
+    .card img {
+        height: 160px !important;
+        object-fit: cover !important;
+    }
+
+    .card p {
+        font-size: 15px !important;
+        text-align: justify !important;
+    }
+
+    .SocialMedias>span {
+        display: block;
+        text-align: center;
+    }
+
+    /* Social medias empilha */
+    .SocialMedias>ul {
+        flex-direction: column !important;
+        gap: 22px !important;
+        align-items: center !important;
+    }
+
+    .SocialMedias>ul>li>.cardMidia>a>img {
+        width: 200px !important;
+    }
+
+    /* Form contato */
+    .faleComigo {
+        padding: 14px !important;
+        width: 96% !important;
+    }
+
+    .cardMessage>input {
+        width: 95% !important;
+    }
+
+    .cardMessage>textarea {
+        width: 95% !important;
+    }
+
+    button {
+        width: 100% !important;
+    }
+
+    footer {
+        font-size: 15px !important;
+        padding: 18px 10px !important;
+    }
+}
+
+
+/* Extra — telefones bem estreitos (até 420px) */
+@media (max-width: 420px) {
+    .informFirst>.perfilImage>img {
+        width: 210px !important;
+    }
+
+    .projetos>span {
+        font-size: 1.6rem !important;
+    }
+
+    header>nav.nav-menu>a {
+        font-size: 14px !important;
+        padding: 6px 8px !important;
+    }
+
+    .card img {
+        height: 140px !important;
+    }
+
+    .scroll-content {
+        gap: 28px !important;
+    }
+}
+
+/* ======================================================= */
