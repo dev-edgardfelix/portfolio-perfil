@@ -1,0 +1,464 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+    overflow-x: hidden;
+    background-color: #000;
+    color: #fff;
+}
+
+.background {
+    padding: 20px;
+}
+
+header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>div.image>img {
+
+    width: 80px;
+    height: 110px;
+}
+
+header>nav.nav-menu>a {
+    margin-right: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    font-family: "Fira Code", monospace;
+    color: #fff;
+}
+
+header>nav.nav-menu>a:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 0px;
+    background-color: blue;
+    transition: width 0.5s ease-in-out;
+}
+
+header>nav.nav-menu>a:hover {
+    color: #4659ff;
+    transition-duration: .2s;
+}
+
+header>nav.nav-menu>a:hover::after {
+    width: 100%;
+}
+
+header>nav.nav-menu>a:active {
+    color: blue;
+}
+
+
+
+.informFirst {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.informFirst>.perfilImage {
+    padding: 15px;
+}
+
+
+.informFirst > .perfilImage > img {
+  width: 400px;
+  border-radius: 50%;
+  border: 2px solid #ffffff80;
+  box-shadow: 0 0 30px 5px rgba(0, 110, 255, 0.7);
+  animation: float 5s ease-in-out infinite;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+    box-shadow: 0 0 30px 5px rgba(0, 31, 172, 0.767);
+  }
+  50% {
+    transform: translateY(-15px);
+    box-shadow: 0 0 40px 10px rgba(0, 26, 255, 0.9);
+  }
+  100% {
+    transform: translateY(0px);
+    box-shadow: 0 0 30px 5px rgba(0, 37, 204, 0.795);
+  }
+}
+
+
+
+.perfilDescription{
+    font-size: 24px;
+}
+
+.perfilDescription>span {
+    font-family: "Fira Code", monospace;
+}
+
+.perfilDescription>.typing {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.typing {
+  
+  border-right: 3px solid #00aaff; /* cursor */
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(25, end), blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
+.perfilDescription>h2 {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+
+
+
+
+.redes-sociais {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    font-size: 2rem;
+    margin-top: 25px;
+    padding: 5px;
+    cursor: pointer;
+}
+.redes-sociais>a{
+    color: #fff;
+}
+.redes-sociais>a>i:hover {
+    transform: translateY(-5px);
+    transition-duration: .4s;
+}
+
+.fa-instagram:hover {
+    color: rgb(221, 0, 122);
+    transition-duration: .2s;
+}
+
+.fa-linkedin:hover {
+    color: rgb(0, 97, 187);
+    transition-duration: .2s;
+}
+
+.fa-github:hover {
+    color: rgb(122, 0, 153);
+    transition-duration: .2s;
+}
+
+
+
+article,
+h3,
+p {
+    background-color: #080808;
+}
+
+article {
+    padding: 30px;
+    min-width: 300px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px green;
+}
+
+
+article:hover {
+    transform: translateY(-3px);
+    transition: .5s ease-in-out;
+    box-shadow: 0 0 20px green;
+}
+
+article>h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: "Fira Code", monospace;
+}
+
+article>.subNota {
+    margin-bottom: 100px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 26px;
+
+}
+
+article>.subtitulo {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: "Fira Code", monospace;
+}
+
+article>.textDesc {
+    font-size: 22px;
+}
+
+.scroll-container {
+  width: 100vw;            
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  background: transparent;
+  padding: 40px 0;    
+  margin: 0;          
+  margin-top: 150px;
+}
+
+.scroll-content {
+  display: inline-flex;
+  gap: 50px;
+  animation: scroll 90s linear infinite;
+}
+
+.scroll-content img {
+  width: 100px;
+  filter: brightness(0.9);
+  transition: transform 0.3s ease;
+  
+}
+
+.scroll-content img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+.projetos {
+    margin-top: 150px;
+}
+
+.projetos>span {
+    font-size: 2.5rem;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-family: monospace;
+    text-shadow: 0 0 5px blue;
+
+}
+
+.projetos>.cardsProjects {
+    width: 350px;
+    background-color: #080808;
+    padding: 10px;
+    margin-top: 70px;
+    border-radius: 10px;
+    height: auto;
+    overflow: hidden;
+}
+
+.SocialMedias {
+    margin-top: 300px;
+    margin-bottom: 150px;
+    padding: 10px;
+}
+
+.SocialMedias > span{
+    font-family: monospace;
+}
+
+.SocialMedias>span {
+    font-size: 2rem;
+
+}
+
+.SocialMedias>ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    font-size: 3.5rem;
+}
+
+.SocialMedias>ul>li{
+    list-style: none;
+}
+
+.SocialMedias>ul>li:hover {
+    transform: translateY(-3px);
+    transition-duration: .5s;
+
+}
+
+.SocialMedias > ul > li > .cardMidia{
+    background-color: #080808;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px green;
+}
+
+.SocialMedias > ul > li > .cardMidia:hover{
+    transition: .3s;
+    box-shadow: 0 0 15px green;
+}
+
+.SocialMedias > ul > li > .cardMidia > a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.SocialMedias > ul > li > .cardMidia > a > h3{
+    font-size: 18px;
+    text-align: center;
+}
+
+.SocialMedias > ul > li > .cardMidia > a > img{
+    width: 200px;
+    border-radius: 10px;
+}
+
+.faleComigo {
+    background-color: #080808;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 0 5px green;
+}
+
+.faleComigo>p {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.cardMessage {
+    display: flex;
+    flex-direction: column;
+    background-color: #080808;
+}
+
+.cardMessage>span {
+    background-color: #080808;
+    margin-top: 10px;
+}
+
+.cardMessage>input,
+textarea {
+    border: none;
+    background-color: rgb(0, 0, 15);
+    margin: 10px;
+}
+
+.cardMessage>input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.cardMessage>input:focus{
+    transition: .3s ease-in-out;
+    box-shadow: 0 0 10px darkblue;
+}
+
+.cardMessage>textarea {
+    width: 95%;
+    padding: 15px;
+    border-radius: 5px;
+    resize: none;
+    font-size: 18px;
+    color: #fff;
+}
+
+.cardMessage>textarea:focus{
+    transition: .3s ease-in-out;
+    box-shadow: 0 0 10px darkblue;
+}
+
+button {
+    background-color: blue;
+    color: #fff;
+    border: none;
+    width: 50%;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: rgb(0, 0, 158);
+    transition: 0.2s ease-in-out;
+}
+
+button:active {
+    background-color: rgb(0, 0, 109);
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* fica atrás de tudo */
+    background: radial-gradient(circle at 50% 50%, #020024 0%, #000 100%);
+}
