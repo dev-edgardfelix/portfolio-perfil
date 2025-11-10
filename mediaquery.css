@@ -3,7 +3,11 @@
 /* Mobile large e pequenos (até 768px) */
 @media (max-width: 768px) {
 
-    /* força o header a virar coluna e centralizar */
+    body{
+        scroll-behavior: smooth;
+    }
+
+    
     header {
         display: flex !important;
         flex-direction: column !important;
@@ -12,13 +16,13 @@
         padding: 10px 16px !important;
     }
 
-    /* logo menor */
+    
     header>.image>img {
         width: 70px !important;
         height: 90px !important;
     }
 
-    /* faz o nav ocupar linha própria e centraliza os links */
+    
     header>nav.nav-menu {
         display: flex !important;
         flex-wrap: wrap !important;
@@ -29,7 +33,7 @@
         order: 2;
     }
 
-    /* cada link vira um bloco para quebrar em várias linhas */
+    
     header>nav.nav-menu>a {
         display: inline-block !important;
         font-size: 16px !important;
@@ -38,7 +42,7 @@
         white-space: nowrap;
     }
 
-    /* Perfil principal passa a coluna */
+    
     .informFirst {
         flex-direction: column !important;
         gap: 30px !important;
@@ -63,7 +67,7 @@
         font-size: 1.8rem !important;
     }
 
-    /* Ajustes no artigo */
+    
     article {
         margin-top: 120px !important;
         padding: 18px !important;
@@ -78,12 +82,12 @@
         font-size: 18px !important;
     }
 
-    /* Ícones scroll */
+    
     .scroll-content img {
         width: 80px !important;
     }
 
-    /* Projetos: empilha os cards em coluna */
+    
     .projetos {
         margin-top: 80px !important;
         padding: 0 12px !important;
@@ -121,7 +125,7 @@
         text-align: center;
     }
 
-    /* Social medias empilha */
+    
     .SocialMedias>ul {
         flex-direction: column !important;
         gap: 22px !important;
@@ -132,7 +136,7 @@
         width: 200px !important;
     }
 
-    /* Form contato */
+    
     .faleComigo {
         padding: 14px !important;
         width: 96% !important;
@@ -157,7 +161,7 @@
 }
 
 
-/* Extra — telefones bem estreitos (até 420px) */
+
 @media (max-width: 420px) {
     .informFirst>.perfilImage>img {
         width: 210px !important;
