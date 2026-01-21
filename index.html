@@ -2,228 +2,142 @@
 <html lang="pt-BR">
 
 <head>
-    <link rel="shortcut icon" href="icon/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaquery.css">
-    <script src="https://kit.fontawesome.com/31e7442060.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edgard Felix - Engenheiro de Software</title>
+    <meta name="theme-color" content="#000000">
+    <title>Edgard Felix | Engenharia de Software</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/31e7442060.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon/logo.ico" type="image/x-icon">
 </head>
 
 <body>
     <canvas id="bgCanvas"></canvas>
 
-    <div class="background">
-        <header>
-            <div class="image">
-                <img src="media/logo-image.png" alt="logo-marca">
-            </div>
+    <header id="header">
+        <div class="logo">
+            <span>EF.</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#faleComigo" class="cta-button">Contato</a>
+        </nav>
+        <div class="mobile-menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
 
-            <nav class="nav-menu">
-                <a href="#sobre">Sobre</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#redesSociais">Redes Sociais</a>
-                <a href="#faleComigo">Fale comigo</a>
-            </nav>
-        </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content reveal">
+                <div class="badge">Engenheiro de Software</div>
+                <h1>Transformando código<br>em <span class="gradient-text">legado digital.</span></h1>
+                <p class="subtitle">Especialista em criar ecossistemas digitais de alta performance que convertem
+                    tecnologia em resultado de negócios.</p>
 
-
-        <main class="informFirst">
-            <div class="perfilImage">
-                <img src="media/perfil-portfolio.jpg" alt="foto-perfil">
-            </div>
-
-            <aside class="perfilDescription">
-                <span>Olá, eu sou</span>
-                <h1 class="typing">Edgard Felix</h1>
-                <h2>Engenheiro de Software</h2>
-
-                <div class="redes-sociais">
-                    <a href="https://www.instagram.com/diariodeumdev2025/
-                    " target="_blank">
-                        <i class="fa-brands fa-instagram"></i></a>
-
-                    <a href="https://www.linkedin.com/in/edgard-felix" target="_blank"><i
-                            class="fa-brands fa-linkedin"></i></a>
-
-                    <a href="https://github.com/dev-edgardfelix" target="_blank">
-                        <i class="fa-brands fa-github"></i></a>
+                <div class="hero-actions">
+                    <a href="#projetos" class="btn-primary">Ver Obras</a>
+                    <a href="https://github.com/dev-edgardfelix" target="_blank" class="btn-secondary"><i
+                            class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/edgard-felix" target="_blank" class="btn-secondary"><i
+                            class="fa-brands fa-linkedin"></i> LinkedIn</a>
                 </div>
-            </aside>
-        </main>
+            </div>
 
-        <article  id="sobre">
-            <h3>Nota</h3>
-            <p class="subNota">Mas... não sou só o cara que faz site bonito —
-                sou o cara que faz o seu projeto crescer.</p>
+            <div class="hero-image reveal delay-200">
+                <img src="media/perfil-portfolio.jpg" alt="Edgard Felix">
+                <div class="glow-effect"></div>
+            </div>
+        </section>
 
-            <p class="subtitulo">Exemplo:</p>
-            <p class="textDesc">Você tem um restaurante? Um sistema?
-                Se ele não te gera lucro, ele tá te fazendo perder.
-                Eu desenvolvo soluções completas:
-                pedido, entrega, estoque, relatórios, tudo automatizado.
-                Meu foco é simples:
-                te colocar à frente, aumentar seus resultados
-                e transformar tecnologia em vitória.
-                Enquanto outros entregam códigos,
-                eu entrego conquistas.</p>
+        <div class="tech-ticker reveal">
+            <div class="ticker-track">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
+            </div>
+        </div>
+
+        <article id="sobre" class="manifesto reveal">
+            <div class="content-wrapper">
+                <h3>A Filosofia</h3>
+                <h2>Não é apenas software.<br>É estratégia.</h2>
+                <div class="grid-text">
+                    <p>Você tem um sistema? Se ele não gera lucro ou eficiência, ele é apenas custo. Eu não escrevo
+                        apenas linhas de código; eu desenho arquiteturas que escalam.</p>
+                    <p>Do pedido à entrega, da interface ao banco de dados. Meu foco é simples: <strong>Autoridade
+                            Digital</strong>. Enquanto o mercado entrega funcionalidades, eu entrego ecossistemas que
+                        colocam sua empresa à frente do tempo.</p>
+                </div>
+            </div>
         </article>
 
-
-        <div class="scroll-container">
-            <div class="scroll-content">
-
-                <!--HTML-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-
-                <!--CSS-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-
-                <!--JAVASCRIPT-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
-
-                <!--TYPESCRIPT-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg" />
-
-                <!--REACT.JS-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-
-                <!--NODE.JS-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
-
-                <!--NPM-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original.svg" />
-
-                <!--YARN-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/yarn/yarn-original.svg" />
-
-                <!--MONGODB-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
-
-                <!--AXIOS-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg" />
-
-                <!--STYLED-COMPONENTS-->
-                <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/styledcomponents/styledcomponents-original.svg" />
-
-
-
-
-                <!--HTML-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-
-                <!--CSS-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-
-                <!--JAVASCRIPT-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
-
-                <!--TYPESCRIPT-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg" />
-
-                <!--REACT.JS-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-
-                <!--NODE.JS-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
-
-                <!--NPM-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original.svg" />
-
-                <!--YARN-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/yarn/yarn-original.svg" />
-
-                <!--MONGODB-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
-
-                <!--AXIOS-->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg" />
-
-                <!--STYLED-COMPONENTS-->
-                <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/styledcomponents/styledcomponents-original.svg" />
-
+        <section id="projetos" class="projects-section">
+            <div class="section-header reveal">
+                <span>Portfólio</span>
+                <h2>Projetos Selecionados</h2>
             </div>
-        </div>
-
-
-        <div class="projetos" id="projetos">
-            <span>Projetos publicados:</span>
-            <div class="cardsProjects"></div>
-        </div>
-
-
-        <div class="SocialMedias" id="redesSociais">
-
-            <span>Mais sobre mim:</span>
-
-            <ul>
-                <li>
-                    <div class="cardMidia">
-                        <a href="https://www.instagram.com/diariodeumdev2025/
-                        " target="_blank">
-                            <img src=" media/instagram-logo.png" alt="">
-
-                            <h3>Acessar meu Instagram</h3>
-
-                        </a>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="cardMidia">
-                        <a href="https://www.linkedin.com/in/edgard-felix" target="_blank">
-                            <img src="media/linkedin-logo.png" alt="">
-
-                            <h3>Acessar meu LinkedIn</h3>
-                        </a>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="cardMidia">
-                        <a href="https://github.com/dev-edgardfelix" target="_blank">
-                            <img src="media/github-logo.png" alt="">
-
-                            <h3>Acessar meu Github</h3>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-
-        <div class="faleComigo" id="faleComigo">
-            <p>Envie-me uma mensagem:</p>
-
-            <div class="cardMessage">
-                <span>Nome:</span>
-                <input type="text" name="nome" id="nome" placeholder="Digite seu Nome" required>
-
-
-                <span>E-mail:</span>
-                <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
-
-
-                <span>Celular:</span>
-                <input type="text" name="celular" id="celular" placeholder="Digite seu Número de Celular" required>
-
-                <span>Mensagem:</span>
-                <textarea name="mensagem" id="mensagem" rows="10" placeholder="Escreva sua mensagem" required></textarea>
-
-                <button id="btnEnviar">Enviar mensagem</button>
+            <div class="cardsProjects reveal">
             </div>
-        </div>
-    </div>
-    
+        </section>
+
+        <section id="faleComigo" class="contact-section reveal">
+            <div class="contact-container glass-panel">
+                <div class="contact-info">
+                    <h2>Vamos construir o futuro?</h2>
+                    <p>Estou disponível para projetos ambiciosos e consultorias.</p>
+                    <div class="social-links-minimal">
+                        <a href="https://www.instagram.com/diariodeumdev2025/" target="_blank">Instagram</a>
+                        <a href="https://www.linkedin.com/in/edgard-felix" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/dev-edgardfelix" target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="form-wrapper">
+                    <div class="input-group">
+                        <label>Nome</label>
+                        <input type="text" id="nome" placeholder="Seu nome completo">
+                    </div>
+                    <div class="input-group">
+                        <label>E-mail Corporativo</label>
+                        <input type="email" id="email" placeholder="nome@empresa.com">
+                    </div>
+                    <div class="input-group">
+                        <label>WhatsApp</label>
+                        <input type="text" id="celular" placeholder="(11) 99999-9999">
+                    </div>
+                    <div class="input-group">
+                        <label>Como posso ajudar?</label>
+                        <textarea id="mensagem" rows="4" placeholder="Descreva seu desafio..."></textarea>
+                    </div>
+                    <button id="btnEnviar" class="btn-primary full-width">Iniciar Conversa</button>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        &copy;Todos os direitos reservados ~ Desenvolvido por @EdgardFelix
+        <p>&copy; 2025 Edgard Felix. Engenharia de Software.</p>
     </footer>
-    
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>

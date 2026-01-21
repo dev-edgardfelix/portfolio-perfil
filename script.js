@@ -1,31 +1,58 @@
-//---------------------BACKGROUND----------------------
+// --- Scroll Reveal Animation ---
+// Adiciona a classe .visible quando o elemento entra na tela
+const observerOptions = {
+    threshold: 0.1
+};
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.reveal').forEach(el => {
+    observer.observe(el);
+});
+
+
+// --- Canvas Background (Otimizado) ---
 const canvas = document.getElementById('bgCanvas');
 const ctx = canvas.getContext('2d');
-
 let width, height;
+let points = [];
+
 function resize() {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
+    initPoints();
 }
+
+function initPoints() {
+    points = [];
+    // Menos pontos para mobile para performance
+    const numPoints = window.innerWidth < 768 ? 40 : 80;
+
+    for (let i = 0; i < numPoints; i++) {
+        points.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.3, // Mais lento e elegante
+            vy: (Math.random() - 0.5) * 0.3,
+            radius: Math.random() * 1.5 + 0.5,
+        });
+    }
+}
+
 window.addEventListener('resize', resize);
 resize();
 
-const points = [];
-const numPoints = 80;
-
-for (let i = 0; i < numPoints; i++) {
-    points.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        radius: Math.random() * 2 + 1,
-    });
-}
-
 function animate() {
     ctx.clearRect(0, 0, width, height);
+
+    // Cor das linhas e pontos mais sutil (Azul Apple/System)
+    const color = '100, 150, 255';
 
     for (let p of points) {
         p.x += p.vx;
@@ -36,20 +63,20 @@ function animate() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(0, 150, 255, 0.8)';
+        ctx.fillStyle = `rgba(${color}, 0.5)`;
         ctx.fill();
     }
 
-    for (let i = 0; i < numPoints; i++) {
-        for (let j = i + 1; j < numPoints; j++) {
+    for (let i = 0; i < points.length; i++) {
+        for (let j = i + 1; j < points.length; j++) {
             const dx = points[i].x - points[j].x;
             const dy = points[i].y - points[j].y;
             const dist = Math.sqrt(dx * dx + dy * dy);
 
-            if (dist < 150) {
+            if (dist < 120) {
                 ctx.beginPath();
-                ctx.strokeStyle = `rgba(0, 150, 255, ${1 - dist / 150})`;
-                ctx.lineWidth = 0.8;
+                ctx.strokeStyle = `rgba(${color}, ${1 - dist / 120})`;
+                ctx.lineWidth = 0.5;
                 ctx.moveTo(points[i].x, points[i].y);
                 ctx.lineTo(points[j].x, points[j].y);
                 ctx.stroke();
@@ -61,77 +88,61 @@ function animate() {
 animate();
 
 
-//-----------------------MANDAR MENSAGEM NO WHATSAPP--------------------
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.getElementById("btnEnviar");
-
-    btn.addEventListener("click", function () {
-        const nome = document.getElementById("nome").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const celular = document.getElementById("celular").value.trim();
-        const mensagem = document.getElementById("mensagem").value.trim();
-
-        if (!nome || !email || !celular || !mensagem) {
-            alert("Por favor, preencha todos os campos antes de enviar!");
-            return;
-        }
-
-        const numero = "5511982461456"; // 
-        const texto = `Nome: *${nome}*! 
-Email: ${email} 
-Celular: ${celular} 
-
-${mensagem}`;
-
-
-        const mensagemEncode = encodeURIComponent(texto);
-        const url = `https://wa.me/${numero}?text=${mensagemEncode}`;
-        window.open(url, "_blank");
-    });
-});
-
-
-//---------------------CARDS DOS PROJETOS--------------------------
-
+// --- Injeção de Projetos ---
 const projetos = [
     {
         img: "media/sistem-users.png",
-        titulo: "Sistem Users",
-        descricao: "Sistema Front-End (React) para cadastrar usuários com informações pessoais e sobre seus cargos e funções / Informações sobre a quantidade de usuários cadastrados na plataforma",
+        titulo: "Sistem Users Dashboard",
+        descricao: "Plataforma SaaS para gestão de hierarquia corporativa. Arquitetura React escalável com controle de estado complexo.",
         link: "https://sistemusers.vercel.app/"
     },
-
     {
         img: "media/conversor-cotacao.png",
-        titulo: "Conversor de moedas estrangeiras",
-        descricao: "Aplicação feita com JavaScript que converte o real brasileiro para outras moedas, a cotação monetária se mantém constante, pois há consumo de API Externa que atualiza quaisquer mudanças",
+        titulo: "Global Currency Converter",
+        descricao: "Aplicação financeira em tempo real consumindo APIs de mercado. Foco em precisão decimal e baixa latência.",
         link: "https://currencymoney.vercel.app/"
     },
-
     {
         img: "media/jokenpo.png",
-        titulo: "Pedra, Papel, Tesoura !",
-        descricao: "Uma forma dinâmica para treinamento de Funções e Funções com Parâmetros. Funções (Functions) é a 'base' da linguagem JavaScript, por isso é essencial sua prática. Você contra a máquina, um clássico Video Game!",
+        titulo: "Logic Gaming Interface",
+        descricao: "Experiência interativa demonstrando lógica algorítmica e manipulação dinâmica de DOM.",
         link: "https://jokenpo-nine-phi.vercel.app/"
     }
 ];
 
-
 const cardsContainer = document.querySelector(".cardsProjects");
 
-
 projetos.forEach(projeto => {
+    // Adicionei uma imagem placeholder caso a sua não carregue, para testes
+    const imageSrc = projeto.img ? projeto.img : 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop';
+
     const card = document.createElement("div");
     card.classList.add("card");
-
     card.innerHTML = `
-        <img src="${projeto.img}" alt="${projeto.titulo}">
+        <img src="${imageSrc}" alt="${projeto.titulo}" loading="lazy">
         <h3>${projeto.titulo}</h3>
         <p>${projeto.descricao}</p>
-        <a href="${projeto.link}" target="_blank">Ver projeto</a>
+        <a href="${projeto.link}" target="_blank">View Project</a>
     `;
-
     cardsContainer.appendChild(card);
+});
+
+
+// --- WhatsApp Integration ---
+document.getElementById("btnEnviar").addEventListener("click", function () {
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const celular = document.getElementById("celular").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
+
+    if (!nome || !email || !mensagem) {
+        alert("Para manter nosso padrão de qualidade, preencha as informações essenciais.");
+        return;
+    }
+
+    const numero = "5511982461456";
+    const texto = `*Nova Oportunidade de Negócio*\n\nSolicitante: ${nome}\nEmail: ${email}\nContato: ${celular}\n\n*Briefing:*\n${mensagem}`;
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+    window.open(url, "_blank");
 });
