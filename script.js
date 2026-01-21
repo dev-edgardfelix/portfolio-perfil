@@ -90,6 +90,27 @@ animate();
 
 // --- Injeção de Projetos ---
 const projetos = [
+    //https://espaco-hannah.vercel.app/
+    //https://star-god.vercel.app/
+
+    {
+        img: "media/stargod.png",
+        titulo: "Vidraçaria StarGod",
+        descricao: "Reposicionamento de marca premium através de UX de elite. Este ecossistema digital transforma a necessidade técnica em desejo estético, utilizando um design positivo e performático para maximizar a confiança do cliente e acelerar orçamentos com agilidade.",
+        link: "https://star-god.vercel.app/"
+    },
+    {
+        img: "media/hannah.png",
+        titulo: "Espaço Mulher Hannah",
+        descricao: "Transformação da jornada de agendamento em um serviço de luxo. Design de elite com sistema de reserva customizado e inteligência artificial 24h, projetado para elevar o posicionamento de mercado do Espaço Hannah através da tecnologia.",
+        link: "https://espaco-hannah.vercel.app/"
+    },
+    {
+        img: "media/hannah-painel.png",
+        titulo: "System ADM - Hannah",
+        descricao: "Plataforma SaaS para gestão completa do andamento da empresa e salão de beleza Mulher Hannah",
+        link: "#"
+    },
     {
         img: "media/sistem-users.png",
         titulo: "Sistem Users Dashboard",
@@ -145,4 +166,77 @@ document.getElementById("btnEnviar").addEventListener("click", function () {
 
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
     window.open(url, "_blank");
+});
+
+
+
+
+
+// --- Lógica do Menu Mobile (Versão Direta via JS) ---
+const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+const navMenu = document.querySelector('.nav-menu');
+const navLinks = document.querySelectorAll('.nav-menu a');
+
+// Função para abrir/fechar o menu
+const toggleMenu = () => {
+    // Verifica se o menu está escondido (estilo computado ou inline)
+    const isHidden = window.getComputedStyle(navMenu).display === 'none';
+
+    if (isHidden) {
+        // Estilos para abrir o menu (Padrão Elite Premium)
+        navMenu.style.display = 'flex';
+        navMenu.style.flexDirection = 'column';
+        navMenu.style.position = 'absolute';
+        navMenu.style.top = '80px';
+        navMenu.style.left = '0';
+        navMenu.style.width = '100%';
+        navMenu.style.backgroundColor = 'rgba(5, 5, 7, 0.95)';
+        navMenu.style.backdropFilter = 'blur(15px)';
+        navMenu.style.padding = '30px 0';
+        navMenu.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+        navMenu.style.textAlign = 'center';
+        navMenu.style.zIndex = '1000';
+        
+        mobileMenuIcon.style.transform = 'rotate(90deg)';
+    } else {
+        // Fecha o menu
+        navMenu.style.display = 'none';
+        mobileMenuIcon.style.transform = 'rotate(0deg)';
+    }
+};
+
+// Evento de clique no ícone
+mobileMenuIcon.addEventListener('click', (e) => {
+    e.stopPropagation(); // Evita que o clique feche o menu imediatamente
+    toggleMenu();
+});
+
+// Fecha o menu ao clicar em um link
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 900) {
+            navMenu.style.display = 'none';
+            mobileMenuIcon.style.transform = 'rotate(0deg)';
+        }
+    });
+});
+
+// Fecha o menu se clicar em qualquer lugar fora dele
+document.addEventListener('click', (event) => {
+    const isClickInside = navMenu.contains(event.target);
+    const isClickOnIcon = mobileMenuIcon.contains(event.target);
+
+    if (!isClickInside && !isClickOnIcon && navMenu.style.display === 'flex') {
+        navMenu.style.display = 'none';
+        mobileMenuIcon.style.transform = 'rotate(0deg)';
+    }
+});
+
+// Resetar o menu ao redimensionar a tela para desktop
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+        navMenu.style.display = ''; // Remove estilos inline
+        navMenu.style.flexDirection = '';
+        mobileMenuIcon.style.transform = '';
+    }
 });
