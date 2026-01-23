@@ -90,9 +90,13 @@ animate();
 
 // --- Injeção de Projetos ---
 const projetos = [
-    //https://espaco-hannah.vercel.app/
-    //https://star-god.vercel.app/
-
+    
+ {
+        img: "media/vilareal.png",
+        titulo: "Restaurante Vila Real.",
+        descricao: "Projeto focado em restaurantes de alto padrão que buscam autoridade digital inquestionável. Uma Landing Page que une design sofisticado a uma estratégia agressiva de conversão, transformando presença online em clientes reais através de uma experiência de usuário premium.",
+        link: "https://dev-edgardfelix.github.io/pizzarias/"
+    },
     {
         img: "media/stargod.png",
         titulo: "Vidraçaria StarGod",
