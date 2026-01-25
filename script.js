@@ -91,6 +91,12 @@ animate();
 // --- Injeção de Projetos ---
 const projetos = [
     
+    {
+        img: "media/bd.png",
+        titulo: "Burger&Dragon's / (B&D)",
+        descricao: "Este projeto tem o foco absoluto em agilidade e autoridade digital.A lógica é simples: interface limpa, carregamento instantâneo e checkout sem burocracia direto no WhatsApp. Um sistema robusto desenhado para suportar alta demanda sem perder a elegância. Engenharia de software focada em solucionar a dor real do mercado: vender mais, mais rápido.",
+        link: "https://dev-edgardfelix.github.io/hamburguerias/"
+    },
  {
         img: "media/vilareal.png",
         titulo: "Restaurante Vila Real.",
