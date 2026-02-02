@@ -90,12 +90,17 @@ animate();
 
 // --- Injeção de Projetos ---
 const projetos = [
-    
+    {
+        img: "media/peniel.png",
+        titulo: "PenielHub",
+        descricao: "SaaS de Gestão Financeira para a contabilidade de uma igreja. Tudo o que entra e sai, total de gastos, fechamento de caixa, registros de movimentações em tempo real. Focado em: Tirar horas de trabalho manual anotadas em caderno, eliminar horas perdidas e pouca produção, organização eficaz, sistema usado diariamente. Elegante e de fácil navegação, experiência excelente.",
+        link: "https://administracao-peniel.vercel.app/index.html/"
+    },
     {
         img: "media/bd.png",
         titulo: "Burger&Dragon's / (B&D)",
-        descricao: "Este projeto tem o foco absoluto em agilidade e autoridade digital.A lógica é simples: interface limpa, carregamento instantâneo e checkout sem burocracia direto no WhatsApp. Um sistema robusto desenhado para suportar alta demanda sem perder a elegância. Engenharia de software focada em solucionar a dor real do mercado: vender mais, mais rápido.",
-        link: "https://dev-edgardfelix.github.io/hamburguerias/"
+        descricao: "Este projeto tem o foco absoluto em agilidade e autoridade digital.A lógica é simples: interface limpa, carregamento instantâneo e checkout sem burocracia direto no WhatsApp. Um sistema robusto desenhado para suportar alta demanda sem perder a elegância. Além disso, um sistema em que pedidos chegam em tempo real para que nenum deles sejam anotados de forma manual. Engenharia de software focada em solucionar a dor real do mercado: vender mais, mais rápido.",
+        link: "https://swiftorder-five.vercel.app/"
     },
  {
         img: "media/vilareal.png",
