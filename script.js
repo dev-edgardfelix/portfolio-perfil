@@ -176,12 +176,18 @@ document.getElementById("btnEnviar").addEventListener("click", function () {
         return;
     }
 
+    // ✅ DISPARA O LEAD APÓS VALIDAÇÃO
+    if (typeof fbq === "function") {
+        fbq('track', 'Lead');
+    }
+
     const numero = "5511982461456";
     const texto = `*Nova Oportunidade de Negócio*\n\nSolicitante: ${nome}\nEmail: ${email}\nContato: ${celular}\n\n*Briefing:*\n${mensagem}`;
 
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
     window.open(url, "_blank");
 });
+
 
 
 
