@@ -94,7 +94,7 @@ const projetos = [
         img: "media/peniel.png",
         titulo: "PenielHub",
         descricao: "SaaS de Gestão Financeira para a contabilidade de uma igreja. Tudo o que entra e sai, total de gastos, fechamento de caixa, registros de movimentações em tempo real. Focado em: Tirar horas de trabalho manual anotadas em caderno, eliminar horas perdidas e pouca produção, organização eficaz, sistema usado diariamente. Elegante e de fácil navegação, experiência excelente.",
-        link: ""
+        link: "https://administracao-peniel.vercel.app/login.html"
     },
     {
         img: "media/bd.png",
